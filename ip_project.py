@@ -67,7 +67,7 @@ def selectOption():
   elif (input_choice == 6):
     show_plot()
   elif (input_choice == 0):
-    print("Exit Succesfully")
+    print("Exitting the program")
   else:
     list_option()
     selectOption()
