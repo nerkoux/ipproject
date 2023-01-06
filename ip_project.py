@@ -22,11 +22,11 @@ def login():
 def selectOption():
   input_choice = int(input("Select your choice : "))
   if (input_choice == 1):
-    Id=int(input("Enter Sector to Edit : "))
+    Year=int(input("Enter Year to Edit : "))
     show_columns()
     column_name=input("Enter Column Name : ")
     value = (input("Enter Value : "))
-    edit(Id,column_name,value)
+    edit(Year,column_name,value)
   elif (input_choice == 2):
     id_to_delete=(input("Enter Sector to delete : "))
     delete(id_to_delete)
