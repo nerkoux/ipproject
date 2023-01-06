@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import datetime
 
 file_path = "data.csv"
 df = pd.read_csv(file_path, encoding="unicode_escape")
@@ -77,6 +78,7 @@ def list_option():
   print(" 1. Edit Reord \n 2. Delete Record \n 3. Add record \n 4. Search Record \n 5. Show Record \n 6. Show Graph \n 0. Exit the Program")
   print("-"*60)
   print(" "*5,"DATA MANAGEMENT OF ALL INDIA INDEX 2013-2022")
+  print(" "*5,"Login Time:",datetime.datetime.now())
   print("-"*60)
 
 def show_columns():
