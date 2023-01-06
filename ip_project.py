@@ -15,17 +15,28 @@ def login():
   input_password = input("Enter your password: ")
 
   if input_username == username and input_password == password:
-    print("Login successful!")
+    print("-"*60)
+    print(" "*5,"Welcome to Admin Panel of Data Management server ")
+    print("-"*60)
   else:
     print("Incorrect username or password. Please try again.")
+    login()
+    
+
 
 def selectOption():
   input_choice = int(input("Select your choice : "))
   if (input_choice == 1):
+    print("-"*10)
+    print("Enter the required values below to edit the data")
+    print("-"*10)
     Year=int(input("Enter Year to Edit : "))
+    print("-"*10)
     show_columns()
     column_name=input("Enter Column Name : ")
+    print("-"*10)
     value = (input("Enter Value : "))
+    print("-"*10)
     edit(Year,column_name,value)
   elif (input_choice == 2):
     id_to_delete=(input("Enter Sector to delete : "))
@@ -46,6 +57,9 @@ def selectOption():
 
 def list_option():
   print(" 1. Edit \n 2. Delete \n 3. Add record \n 4. Search \n 5. Show Record \n 6. Show Graph \n 0. Exit")
+  print("-"*60)
+  print(" "*5,"DATA MANAGEMENT OF ALL INDIA INDEX 2013-2022")
+  print("-"*60)
 
 def show_columns():
   for col in df.columns:
@@ -54,7 +68,12 @@ def show_columns():
 def edit(id_to_edit,column_name,new_value):
   df.at[id_to_edit-1, column_name] = new_value
   df.to_csv('file.csv', index=False)
-  print("Record Updated Succesfully")
+  print("-"*60)
+  print(" "*5,"Record Updated Succesfully")
+  print("-"*60)
+  print("-"*60)
+  print(" "*5,"Welcome to Admin Panel of Data Management server ")
+  print("-"*60)
   list_option()
   selectOption()
 
@@ -62,7 +81,12 @@ def delete(id_to_delete):
   df1 = df[df['Sector'] != id_to_delete]
   df1.to_csv('file.csv', index=False)
   print(df1)
-  print("Record deleted Succesfully")
+  print("-"*60)
+  print(" "*5,"Record Removed Succesfully")
+  print("-"*60)
+  print("-"*60)
+  print(" "*5,"Welcome to Admin Panel of Data Management server ")
+  print("-"*60)
   list_option()
   selectOption()
 
@@ -88,7 +112,7 @@ def show_plot():
 
   plt.show()
 
-
+  
 login()
 list_option()
 selectOption()
