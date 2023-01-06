@@ -56,7 +56,8 @@ def selectOption():
     selectOption()
 
 def list_option():
-  print(" 1. Edit \n 2. Delete \n 3. Add record \n 4. Search \n 5. Show Record \n 6. Show Graph \n 0. Exit")
+  print("What would you like to do today?")
+  print(" 1. Edit Reord \n 2. Delete Record \n 3. Add record \n 4. Search Record \n 5. Show Record \n 6. Show Graph \n 0. Exit the Program")
   print("-"*60)
   print(" "*5,"DATA MANAGEMENT OF ALL INDIA INDEX 2013-2022")
   print("-"*60)
@@ -69,7 +70,7 @@ def edit(id_to_edit,column_name,new_value):
   df.at[id_to_edit-1, column_name] = new_value
   df.to_csv('file.csv', index=False)
   print("-"*60)
-  print(" "*5,"Record Updated Succesfully")
+  print(" "*5,column_name," Record for Year ",new_value,"has been Updated Succesfully")
   print("-"*60)
   print("-"*60)
   print(" "*5,"Welcome to Admin Panel of Data Management server ")
@@ -81,9 +82,9 @@ def delete(id_to_delete):
   df1 = df[df['Sector'] != id_to_delete]
   df1.to_csv('file.csv', index=False)
   print(df1)
-  print("-"*60)
-  print(" "*5,"Record Removed Succesfully")
-  print("-"*60)
+  print("-"*150)
+  print(" "*5,"Succesfully Removed",id_to_delete,"Sector from the data")
+  print("-"*150)
   print("-"*60)
   print(" "*5,"Welcome to Admin Panel of Data Management server ")
   print("-"*60)
