@@ -6,6 +6,23 @@ df = pd.read_csv(file_path, encoding="unicode_escape")
 
 df.head(10)
 
+def program():
+  choice = int(input("Select your choice : "))
+  if (choice == 1):
+    login()
+  elif (choice == 0):
+    print("Exited the program Succesfully")
+    exit()
+
+    def menu():
+      print("Welcome To Dashboard")
+print(" 1. Login \n 0. Exit the Program")
+print("-"*60)
+print(" "*5,"Welcome To Dashboard")
+print("-"*60)
+
+    
+  
 def login():
 
   username = "admin"
@@ -113,7 +130,6 @@ def show_plot():
 
   plt.show()
 
-  
-login()
+program()
 list_option()
 selectOption()
