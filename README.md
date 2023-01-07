@@ -1,4 +1,4 @@
-# 💫 About Me:
+# 💫 DATA INDEXING:
 This is my project assigned by school.
 
 
