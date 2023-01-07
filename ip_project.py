@@ -75,7 +75,7 @@ def selectOption():
 
 def list_option():
   print("What would you like to do today?")
-  print(" 1. Edit Reord \n 2. Delete Record \n 3. Add record \n 4. Search Record \n 5. Show Record \n 6. Show Graph \n 0. Exit the Program")
+  print(" 1. Edit Record \n 2. Delete Record \n 3. Add record \n 4. Search Record \n 5. Show Record \n 6. Show Graph \n 0. Exit the Program")
   print("-"*60)
   print(" "*5,"DATA MANAGEMENT OF ALL INDIA INDEX 2013-2022")
   print(" "*5,"Login Time:",datetime.datetime.now())
